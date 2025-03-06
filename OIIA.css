@@ -1,5 +1,27 @@
 body {
-  background-color: #1abc9c;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
+  top: 50vh;
+}
+
+.body.playing {
+  animation: Playing 6800ms ease-in-out backwards;
+  top: 0vh;
+}
+
+@keyframes Playing {
+  0% {
+    top: 50vh;
+  }
+  100% {
+    top: 0vh;
+  }
 }
 
 .audio {
@@ -10,9 +32,7 @@ body {
   align-items: center;
 }
 
-.body {
-  width: 95vw;
-  height: 21vh;
+.OIIACat {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +43,7 @@ body {
   animation-iteration-count: infinite;
   animation-duration: 500ms;
   animation-timing-function: linear;
+
 }
 
 @keyframes OIIA1 {
@@ -36,8 +57,6 @@ body {
     transform: translateX(-30px);
   }
 }
-
-
 
 .OIIA2 {
   animation-name: OIIA2;
@@ -59,13 +78,26 @@ body {
 }
 
 .OIIA3 {
-  animation-name: OIIA3;
+  animation: OIIA3 1ms infinite linear;
+}
+
+@keyframes OIIA3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.OIIA4 {
+  animation-name: OIIA4;
   animation-iteration-count: infinite;
   animation-duration: 500ms;
   animation-timing-function: ease-in;
 }
 
-@keyframes OIIA3 {
+@keyframes OIIA4 {
   0% {
     transform: translateX(-30px) translateY(-30px);
   } 
@@ -84,12 +116,90 @@ body {
 
 }
 
-.OIIA4 {
-  animation: OIIA4 500ms infinite ease-in-out;
-
+.OIIA5 {
+  animation: OIIA5 500ms infinite linear;
 }
 
-@keyframes OIIA4 {
+@keyframes OIIA5 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.OIIA6 {
+  animation: OIIA6 500ms infinite linear;
+}
+
+@keyframes OIIA6 {
+  0%, 100% {
+    transform: skewX(0deg);
+  }
+
+  50% {
+    transform: skewX(30deg);
+  }
+}
+
+.OIIA7 {
+  animation: OIIA7 500ms infinite linear;
+}
+
+@keyframes OIIA7 {
+  0%, 100% {
+    transform: skewX(0deg);
+  }
+
+  50% {
+    transform: skewX(-30deg);
+  }
+}
+
+.OIIA8 {
+  animation: OIIA8 500ms infinite linear;
+}
+
+@keyframes OIIA8 {
+  0%, 50%, 100% {
+    transform: skewX(0deg);
+  }
+  25% {
+    transform: skewX(30deg);
+  }
+  75% {
+    transform: skewX(-30deg);
+  }
+}
+
+.OIIA9 {
+  animation: OIIA9 500ms infinite ease-in-out;
+}
+
+@keyframes OIIA9 {
+  0%, 100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  25% {
+    transform: scaleX(1.3) scaleY(0.7);
+  }
+  50% {
+    transform: scaleX(0.7) scaleY(1.3);
+  }
+  75% {
+    transform: scaleX(1.3) scaleY(0.7);
+  }
+}
+
+.OIIA10 {
+  animation: OIIA10 1000ms infinite ease-in-out;
+}
+
+@keyframes OIIA10 {
   0% {
     transform: rotate(0deg);
   }
@@ -98,72 +208,73 @@ body {
   }
 }
 
-.OIIA5 {
-  animation: OIIA5 1000ms infinite linear;
-}
-
-@keyframes OIIA5 {
-  0% {
-    transform: scaleX();
-  }
-}
-
-.OIIA6 {
-  
-}
-
-.OIIA7 {
-
-}
-
-.OIIA8 {
-  
-}
-
-.OIIA9 {
-
-}
-
-.OIIA10 {
-  
-}
-
 .OIIA11 {
-
+  position: absolute;
+  animation: OIIA11 1000ms infinite linear;
 }
 
-.OIIA12 {
-  
-}
-
-.OIIA13 {
-
-}
-
-.OIIA14 {
-  
-}
-
-.OIIA15 {
-
-}
-
-.OIIA16 {
-  
-}
-
-.OIIA17 {
-
-}
-
-.OIIA18 {
-  
-}
-
-.OIIA19 {
-
-}
-
-.OIIA20 {
-  
+@keyframes OIIA11 {
+  0% {
+    transform: translate(0, 50%) rotate(0deg) scale(1);
+  }
+  5% {
+    transform: translate(-400%, 420%) rotate(180deg) scale(8);
+  }
+  10% {
+    transform: translate(30%, -300%) rotate(360deg) scale(3);
+  }
+  15% {
+    transform: translate(600%, -200%) rotate(540deg) scale(5);
+  }
+  20% {
+    transform: translate(-20%, 50%) rotate(720deg) scale(2);
+  }
+  25% {
+    transform: translate(200%, -300%) rotate(900deg) scale(7);
+  }
+  30% {
+    transform: translate(-400%, 300%) rotate(1080deg) scale(1);
+  }
+  35% {
+    transform: translate(-90%, 100%) rotate(1260deg) scale(3);
+  }
+  40% {
+    transform: translate(500%, -10%) rotate(1440deg) scale(1);
+  }
+  45% {
+    transform: translate(100%, -500%) rotate(1620deg) scale(5);
+  }
+  50% {
+    transform: translate(-600%, 500%) rotate(1800deg) scale(2);
+  }
+  55% {
+    transform: translate(300%, 300%) rotate(1980deg) scale(5);
+  }
+  60% {
+    transform: translate(-700%, -700%) rotate(2160deg) scale(4);
+  }
+  65% {
+    transform: translate(200%, 200%) rotate(2340deg) scale(2);
+  }
+  70% {
+    transform: translate(800%, -800%) rotate(2520deg) scale(7);
+  }
+  75% {
+    transform: translate(400%, 600%) rotate(2700deg) scale(4);
+  }
+  80% {
+    transform: translate(-900%, 300%) rotate(2880deg) scale(5);
+  }
+  85% {
+    transform: translate(500%, 500%) rotate(3060deg) scale(1);
+  }
+  90% {
+    transform: translate(200%, 900%) rotate(3240deg) scale(7);
+  }
+  95% {
+    transform: translate(600%, 100%) rotate(3420deg) scale(3);
+  }
+  100% {
+    transform: translate(0, 0) rotate(3600deg) scale(1);
+  }
 }
