@@ -11,7 +11,7 @@ body {
 }
 
 .body.playing {
-  animation: Playing 6800ms ease-in-out backwards;
+  animation: Playing 6700ms ease-in-out backwards;
   top: 0vh;
 }
 
@@ -30,6 +30,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .OIIACat {
@@ -39,11 +40,7 @@ body {
 }
 
 .OIIA1 {
-  animation-name: OIIA1;
-  animation-iteration-count: infinite;
-  animation-duration: 500ms;
-  animation-timing-function: linear;
-
+  animation: OIIA1 500ms infinite linear;
 }
 
 @keyframes OIIA1 {
@@ -59,21 +56,18 @@ body {
 }
 
 .OIIA2 {
-  animation-name: OIIA2;
-  animation-iteration-count: infinite;
-  animation-duration: 500ms;
-  animation-timing-function: ease;
+  animation: OIIA2 500ms infinite linear;
 }
 
 @keyframes OIIA2 {
   0% {
-    transform: translateY(-30px);
+    transform: scale(1);
   }
   50% {
-    transform: translateY(30px);
+    transform: scale(1.3);
   }
   100% {
-    transform: translateY(-30px);
+    transform: scale(1);
   }
 }
 
@@ -91,10 +85,7 @@ body {
 }
 
 .OIIA4 {
-  animation-name: OIIA4;
-  animation-iteration-count: infinite;
-  animation-duration: 500ms;
-  animation-timing-function: ease-in;
+  animation: OIIA4 500ms infinite ease-in;
 }
 
 @keyframes OIIA4 {
@@ -117,18 +108,18 @@ body {
 }
 
 .OIIA5 {
-  animation: OIIA5 500ms infinite linear;
+  animation: OIIA5 500ms infinite ease;
 }
 
 @keyframes OIIA5 {
   0% {
-    transform: scale(1);
+    transform: translateY(-30px);
   }
   50% {
-    transform: scale(1.3);
+    transform: translateY(30px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(-30px);
   }
 }
 
@@ -147,16 +138,15 @@ body {
 }
 
 .OIIA7 {
-  animation: OIIA7 500ms infinite linear;
+  animation: OIIA7 1000ms infinite ease-in-out;
 }
 
 @keyframes OIIA7 {
-  0%, 100% {
-    transform: skewX(0deg);
+  0% {
+    transform: rotate(0deg);
   }
-
-  50% {
-    transform: skewX(-30deg);
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -196,15 +186,16 @@ body {
 }
 
 .OIIA10 {
-  animation: OIIA10 1000ms infinite ease-in-out;
+  animation: OIIA10 500ms infinite linear;
 }
 
 @keyframes OIIA10 {
-  0% {
-    transform: rotate(0deg);
+  0%, 100% {
+    transform: skewX(0deg);
   }
-  100% {
-    transform: rotate(360deg);
+
+  50% {
+    transform: skewX(-30deg);
   }
 }
 
@@ -257,13 +248,13 @@ body {
     transform: translate(200%, 200%) rotate(2340deg) scale(2);
   }
   70% {
-    transform: translate(800%, -800%) rotate(2520deg) scale(7);
+    transform: translate(100%, -800%) rotate(2520deg) scale(7);
   }
   75% {
     transform: translate(400%, 600%) rotate(2700deg) scale(4);
   }
   80% {
-    transform: translate(-900%, 300%) rotate(2880deg) scale(5);
+    transform: translate(-300%, 300%) rotate(2880deg) scale(5);
   }
   85% {
     transform: translate(500%, 500%) rotate(3060deg) scale(1);
